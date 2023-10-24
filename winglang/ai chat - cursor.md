@@ -74,9 +74,8 @@ In the context of CDKTF (Cloud Development Kit for Terraform), a construct is a 
 In the JSON file, the root of the tree is an App construct, as indicated by the fqn in the constructInfo field. The App construct acts as a container for the infrastructure configurations you create and deploy[^2^].  
   
 The children of the App construct can be considered as Stack or Resource constructs in CDKTF terms. A Stack represents a collection of infrastructure resources that CDKTF synthesizes as a separate Terraform configuration[^2^]. A Resource represents the definition for one or more infrastructure objects[^2^].  
-  
-[^1^]: https://www.winglang.io/docs/faq/why-a-language  
 
-[^2^]: https://developer.hashicorp.com/terraform/cdktf/concepts/cdktf-architecture
+- [^1^]: https://www.winglang.io/docs/faq/why-a-language  
+- [^2^]: https://developer.hashicorp.com/terraform/cdktf/concepts/cdktf-architecture
 
 -----
