@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "winglang/ai chat - cursor.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "winglang/ai chat - cursor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "winglang/ai chat - cursor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "winglang/ai chat - cursor.md"
               }
             }
           }
@@ -148,6 +148,8 @@
   },
   "active": "5d1240cadaf9672d",
   "lastOpenFiles": [
+    "README.md",
+    "winglang/ai chat - cursor.md",
     "winglang/4297/fix notes.md",
     "winglang/4297/4297 fix compiler.md",
     "winglang/git.md",
@@ -159,7 +161,6 @@
     "github/Untitled.md",
     "github/slides-2022.pdf",
     "github/Github.md",
-    "README.md",
     "wing-oss/winglang/4297/image.png",
     "wing-oss/winglang/4297/fix notes.md",
     "wing-oss/winglang/4297/4297 fix compiler.md",
