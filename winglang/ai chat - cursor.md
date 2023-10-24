@@ -59,7 +59,8 @@ Q:
       "version": "0.0.0"
     }
   }
-}```
+}
+```
 
 A: 
 The provided JSON file represents the structure of a Winglang application, which is organized as a tree of constructs.  
