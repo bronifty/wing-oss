@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "github/Github.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "8daab23b3b549aed",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "github/Github.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "github/Github.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "github/Github.md"
+                "file": "README.md"
               }
             }
           }
@@ -148,10 +148,34 @@
   },
   "active": "5d1240cadaf9672d",
   "lastOpenFiles": [
-    "wing-oss",
+    "winglang/4297/fix notes.md",
+    "winglang/4297/4297 fix compiler.md",
+    "winglang/git.md",
+    "winglang/4297/image.png",
+    "rust/comprehensive rust google course.md",
+    "github_actions/github-actions.pdf",
+    "github_actions/github-actions.md",
     "github_actions/git-review.md",
-    "README.md",
+    "github/Untitled.md",
+    "github/slides-2022.pdf",
     "github/Github.md",
-    "github/Untitled.md"
+    "README.md",
+    "wing-oss/winglang/4297/image.png",
+    "wing-oss/winglang/4297/fix notes.md",
+    "wing-oss/winglang/4297/4297 fix compiler.md",
+    "wing-oss/winglang/git.md",
+    "wing-oss/winglang/4297",
+    "wing-oss/winglang",
+    "wing-oss/rust/comprehensive rust google course.md",
+    "wing-oss/rust",
+    "wing-oss/github_actions/github-actions.pdf",
+    "wing-oss/github_actions/github-actions.md",
+    "wing-oss/github_actions/git-review.md",
+    "wing-oss/github_actions",
+    "wing-oss/github/slides-2022.pdf",
+    "wing-oss/github/Untitled.md",
+    "wing-oss/github/Github.md",
+    "wing-oss/github",
+    "wing-oss"
   ]
 }
