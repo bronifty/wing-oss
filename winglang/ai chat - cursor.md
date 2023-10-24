@@ -1,5 +1,7 @@
-Q:
-@tree.json can you explain to me in the context of @Winglang Docs @CDKTF what this JSON file represents and what is a construct? 
+```text
+Q: @tree.json can you explain to me in the context of @Winglang Docs @CDKTF what this JSON file represents and what is a construct? 
+```
+
 ```json
 {
   "version": "tree-0.1",
@@ -62,6 +64,7 @@ Q:
 }
 ```
 
+```text
 A: 
 The provided JSON file represents the structure of a Winglang application, which is organized as a tree of constructs.  
   
@@ -75,7 +78,8 @@ In the JSON file, the root of the tree is an App construct, as indicated by th
   
 The children of the App construct can be considered as Stack or Resource constructs in CDKTF terms. A Stack represents a collection of infrastructure resources that CDKTF synthesizes as a separate Terraform configuration[^2^]. A Resource represents the definition for one or more infrastructure objects[^2^].  
 
-- [^1^]: https://www.winglang.io/docs/faq/why-a-language  
-- [^2^]: https://developer.hashicorp.com/terraform/cdktf/concepts/cdktf-architecture
+[^1^]: https://www.winglang.io/docs/faq/why-a-language  
+[^2^]: https://developer.hashicorp.com/terraform/cdktf/concepts/cdktf-architecture
+```
 
 -----
