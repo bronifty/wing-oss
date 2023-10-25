@@ -136,7 +136,7 @@ async function compileWingCode(code: string) {
   
 In this example, compileWingCode() first loads the wingc compiler using the load() function. It then invokes the wingc_compile function on the wingc compiler to compile the Wing code. The wingc_compile function is part of the wingc compiler and is implemented in the lib.rs file.
 
-![](./wing-compiler.png)
+![](./wing-compiler2.png)
 
 
 
