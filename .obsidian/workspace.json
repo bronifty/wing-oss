@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "winglang/4297/README.md",
-                "mode": "source",
+                "file": "github_actions/README.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "winglang/4297/README.md",
+                "file": "github_actions/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "winglang/4297/README.md",
+                "file": "github_actions/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "winglang/4297/README.md"
+                "file": "github_actions/README.md"
               }
             }
           }
@@ -148,8 +148,15 @@
   },
   "active": "d0bcb8397bc14aa7",
   "lastOpenFiles": [
-    "winglang/4297/pnpm-build-mine.png",
+    "github_actions/git-review.md",
     "winglang/4297/README.md",
+    "winglang/ai chat - cursor.md",
+    "winglang/git.md",
+    "rust/README.md",
+    "github/README.md",
+    "github/Untitled.md",
+    "cdk/README.md",
+    "winglang/4297/pnpm-build-mine.png",
     "winglang/4297/pnpm-build-original.png",
     "README.md",
     "winglang/4297/compiler-success-try-1 1.png",
@@ -160,17 +167,10 @@
     "winglang/4297/target-resources.png",
     "winglang/4297/wing-compiler.png",
     "winglang/4297/wing-compiler 1.png",
-    "cdk/aws cdk course notes.md",
     "cdk",
     "winglang/4297/4297 fix compiler.md",
-    "winglang/ai chat - cursor.md",
-    "github/Github.md",
-    "winglang/git.md",
-    "rust/comprehensive rust google course.md",
     "github_actions/github-actions.pdf",
-    "github_actions/github-actions.md",
-    "github_actions/git-review.md",
-    "github/Untitled.md",
+    "github_actions/README.md",
     "github/slides-2022.pdf",
     "wing-oss/winglang/4297/fix notes.md",
     "wing-oss/winglang/4297/4297 fix compiler.md",
