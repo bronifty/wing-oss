@@ -107,25 +107,15 @@ Here's what each arrow represents:
   
 - lib.rs --> jsify.rs: The lib.rs file depends on jsify.rs because it uses the jsify() function defined in jsify.rs to convert the abstract syntax tree (AST) of a Wing program into JavaScript code.  
   
-Please note that this is a simplified view and the actual dependencies might be more complex, depending on the specific setup and requirements of your project.
+> 
+> Q: which process is dropping wingc.wasm into the root of wingcompiler?
 
-> Q: lib.rs intermediate value is rust code (.rs) and its final output is javascript via jsify and that final output is what is interacted with through wingc.ts and then finally by compile.ts? how does wingc.ts get a handle to rust code directly if the dependency is not from jsify -> lib ?
+The wingc.wasm file is typically generated as part of the build process for the wingc compiler. This process involves compiling the Rust code of the wingc compiler into WebAssembly (WASM) format.  
+  
+The specific tool or script that moves or copies the wingc.wasm file into the root of the wingcompiler directory can vary depending on the project's build setup. It could be a custom script, a task in a build tool like Make or Gulp, or a step in a continuous integration (CI) pipeline.  
+  
+The purpose of placing the wingc.wasm file in the root of the wingcompiler directory is to make it easily accessible to the wingcompiler library. The load() function in wingc.ts reads the wingc.wasm file from disk when it loads the wingc compiler.
 
-The wingc.ts file interacts with the wingc compiler, which is written in Rust and compiled to WebAssembly (WASM). The wingc compiler includes the lib.rs and jsify.rs modules.  
-  
-The lib.rs module is the main entry point of the wingc compiler. It uses the jsify.rs module to convert the abstract syntax tree (AST) of a Wing program into JavaScript code. This conversion happens inside the wingc compiler, and the resulting JavaScript code is returned as the output of the wingc_compile function.  
-  
-The wingc.ts file doesn't interact with the Rust code directly. Instead, it interacts with the wingc compiler through the WASM interface. The load() function in wingc.ts loads the wingc compiler (which is a WASM module) into a JavaScript environment. Once the wingc compiler is loaded, the wingc.ts file can call various functions on it, such as wingc_compile.  
-  
-The compile.ts file uses the load() function from wingc.ts to load the wingc compiler and then invokes the wingc_compile function on it to compile Wing code. The wingc_compile function returns the JavaScript code that results from the compilation of the Wing code.  
-  
-So, the flow of data is as follows:  
-  
-1. compile.ts calls load() from wingc.ts to load the wingc compiler.  
-2. compile.ts invokes wingc_compile on the wingc compiler to compile Wing code.  
-3. Inside the wingc compiler, lib.rs uses jsify.rs to convert the AST of the Wing program into JavaScript code.  
-4. The JavaScript code is returned as the output of the wingc_compile function.  
-5. compile.ts receives the JavaScript code as the result of the wingc_compile invocation.
 
 
 -----
