@@ -60,10 +60,72 @@ In terms of upstream and downstream resources:
 Sure, let's break down the relationship between these two files:  
   
 1. wingc.ts: This file is part of the wingcompiler TypeScript library and it provides the interface to the wingc compiler. It defines the load() function, which is responsible for loading the wingc compiler and setting up the necessary environment for it to run. It also defines the WingCompilerFunction type, which lists the various functions that can be invoked on the wingc compiler.  
-  
+
+```ts
+export type WingCompilerFunction =
+  | "wingc_compile"
+  | "wingc_on_did_open_text_document"
+  | "wingc_on_did_change_text_document"
+  | "wingc_on_completion"
+  | "wingc_on_signature_help"
+  | "wingc_on_goto_definition"
+  | "wingc_on_document_symbol"
+  | "wingc_on_semantic_tokens"
+  | "wingc_on_hover";
+```
+
 2. compile.ts: This file is also part of the wingcompiler library and it uses the load() function from wingc.ts to load the wingc compiler. Once the compiler is loaded, it can be used to compile Wing code. The compile() function in compile.ts is responsible for this. It sets up the necessary environment variables, loads the wingc compiler, and then invokes the wingc_compile function on it to compile the Wing code.  
   
 In summary, wingc.ts provides the interface to the wingc compiler, and compile.ts uses this interface to compile Wing code. The load() function in wingc.ts is used to load the wingc compiler, and the compile() function in compile.ts is used to compile the Wing code.
+
+> Q: can you explain what part of jsify intersects with the interaction between compile.ts and wingc.ts
+
+The jsify module, defined in jsify.rs, is part of the wingc compiler and is responsible for converting the abstract syntax tree (AST) of a Wing program into JavaScript code. This is a key step in the compilation process because Wing is a language that compiles to JavaScript.  
+  
+In the context of the interaction between compile.ts and wingc.ts, jsify comes into play when the wingc_compile function is invoked on the wingc compiler. Here's a simplified view of how it works:  
+  
+1. The compile() function in compile.ts loads the wingc compiler using the load() function from wingc.ts.  
+2. It then invokes the wingc_compile function on the wingc compiler to compile the Wing code.  
+3. Inside the wingc compiler, the compile() function in lib.rs is called, which parses the Wing code into an AST.  
+4. This AST is then passed to the jsify() function from jsify.rs, which converts the AST into JavaScript code.  
+  
+So, while jsify doesn't directly interact with compile.ts or wingc.ts, it plays a crucial role in the process that these two files are part of, which is the compilation of Wing code.
+
+> Q: can you help me with an arrow diagram pointing the directionality of the dependencies? I am interested in how each file and the files the comprise the modules are dependent on one another.
+
+Sure, here's a simplified arrow diagram showing the directionality of the dependencies:  
+
+```md
+compile.ts --> wingc.ts --> lib.rs --> jsify.rs
+```
+
+Here's what each arrow represents:  
+  
+- compile.ts --> wingc.ts: The compile.ts file depends on wingc.ts because it uses the load() function defined in wingc.ts to load the wingc compiler.  
+  
+- wingc.ts --> lib.rs: The wingc.ts file depends on lib.rs because it interacts with the wingc compiler, which is defined in lib.rs.  
+  
+- lib.rs --> jsify.rs: The lib.rs file depends on jsify.rs because it uses the jsify() function defined in jsify.rs to convert the abstract syntax tree (AST) of a Wing program into JavaScript code.  
+  
+Please note that this is a simplified view and the actual dependencies might be more complex, depending on the specific setup and requirements of your project.
+
+> Q: lib.rs intermediate value is rust code (.rs) and its final output is javascript via jsify and that final output is what is interacted with through wingc.ts and then finally by compile.ts? how does wingc.ts get a handle to rust code directly if the dependency is not from jsify -> lib ?
+
+The wingc.ts file interacts with the wingc compiler, which is written in Rust and compiled to WebAssembly (WASM). The wingc compiler includes the lib.rs and jsify.rs modules.  
+  
+The lib.rs module is the main entry point of the wingc compiler. It uses the jsify.rs module to convert the abstract syntax tree (AST) of a Wing program into JavaScript code. This conversion happens inside the wingc compiler, and the resulting JavaScript code is returned as the output of the wingc_compile function.  
+  
+The wingc.ts file doesn't interact with the Rust code directly. Instead, it interacts with the wingc compiler through the WASM interface. The load() function in wingc.ts loads the wingc compiler (which is a WASM module) into a JavaScript environment. Once the wingc compiler is loaded, the wingc.ts file can call various functions on it, such as wingc_compile.  
+  
+The compile.ts file uses the load() function from wingc.ts to load the wingc compiler and then invokes the wingc_compile function on it to compile Wing code. The wingc_compile function returns the JavaScript code that results from the compilation of the Wing code.  
+  
+So, the flow of data is as follows:  
+  
+1. compile.ts calls load() from wingc.ts to load the wingc compiler.  
+2. compile.ts invokes wingc_compile on the wingc compiler to compile Wing code.  
+3. Inside the wingc compiler, lib.rs uses jsify.rs to convert the AST of the Wing program into JavaScript code.  
+4. The JavaScript code is returned as the output of the wingc_compile function.  
+5. compile.ts receives the JavaScript code as the result of the wingc_compile invocation.
 
 
 -----
