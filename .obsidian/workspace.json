@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "winglang/4297/README.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "winglang/4297/README.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "winglang/4297/README.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "winglang/4297/README.md"
+                "file": "README.md"
               }
             }
           }
@@ -148,10 +148,10 @@
   },
   "active": "d0bcb8397bc14aa7",
   "lastOpenFiles": [
+    "winglang/4297/README.md",
     "winglang/4297/compiler-success-try-1 1.png",
     "winglang/4297/pnpm-compile-and-pnpm-wing.png",
     "README.md",
-    "winglang/4297/README.md",
     "winglang/4297/compiler-success-try-1.png",
     "winglang/4297/wing-compiler3.png",
     "winglang/4297/wing-compiler2.png",
