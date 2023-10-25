@@ -116,6 +116,28 @@ The specific tool or script that moves or copies the wingc.wasm file�
   
 The purpose of placing the wingc.wasm file in the root of the wingcompiler directory is to make it easily accessible to the wingcompiler library. The load() function in wingc.ts reads the wingc.wasm file from disk when it loads the wingc compiler.
 
+> Q: the wing-cli module uses the wingcompiler module which comprises 2 main files - compile.ts and wingc.ts - which use wingc.wasm which provides the wingc module which comprises 2 main files - lib.rs and jsify.rs. In compile.ts the load() function uses wingc.wasm. In wingc.ts what is the function which is called that compile.ts leverages either inside or in conjunction with the load() method?
+
+The compile.ts file uses the load() function from wingc.ts to load the wingc compiler. Once the wingc compiler is loaded, compile.ts can invoke various functions on it.  
+  
+The specific function that compile.ts invokes on the wingc compiler is determined by the WingCompilerFunction argument passed to the invoke() function. The WingCompilerFunction type is defined in wingc.ts and includes various functions like wingc_compile, wingc_on_did_open_text_document, wingc_on_did_change_text_document, etc.  
+  
+Here's an example of how compile.ts might use the load() and invoke() functions from wingc.ts:  
+
+```ts
+import { load, WingCompilerFunction, invoke } from './wingc';
+
+async function compileWingCode(code: string) {
+  const wingc = await load({ /* load options */ });
+  const result = invoke(wingc, WingCompilerFunction.wingc_compile, code);
+  // handle result
+}
+```
+  
+In this example, compileWingCode() first loads the wingc compiler using the load() function. It then invokes the wingc_compile function on the wingc compiler to compile the Wing code. The wingc_compile function is part of the wingc compiler and is implemented in the lib.rs file.
+
+
+
 
 
 -----
