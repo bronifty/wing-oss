@@ -298,7 +298,78 @@ format!("preflight.{}-{}.cjs",
 	}
 ```
 
-### Target Resources
-- preflight.cjs is created by 
+-----
 
-![](./target-resources.png)
+
+## Updates Made
+
+```sh
+git status
+On branch main
+Your branch is behind 'origin/main' by 21 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   libs/wingc/src/jsify.rs
+        modified:   libs/wingcompiler/src/compile.ts
+        modified:   libs/wingsdk/src/shared/bundling.ts
+```
+
+```sh
+bronifty@ubuntu:~/codes/winglang/wing-dev$ git diff libs/wingc/src/jsify.rs
+diff --git a/libs/wingc/src/jsify.rs b/libs/wingc/src/jsify.rs
+index 22d68f3d..0b1cc8b9 100644
+--- a/libs/wingc/src/jsify.rs
++++ b/libs/wingc/src/jsify.rs
+@@ -32,7 +32,7 @@ use crate::{
+ 
+ use self::codemaker::CodeMaker;
+ 
+-const PREFLIGHT_FILE_NAME: &str = "preflight.js";
++const PREFLIGHT_FILE_NAME: &str = "preflight.cjs";
+ 
+ const STDLIB: &str = "$stdlib";
+ const STDLIB_CORE_RESOURCE: &str = formatcp!("{}.{}", STDLIB, WINGSDK_RESOURCE);
+@@ -199,7 +199,7 @@ impl<'a> JSifier<'a> {
+                        // add a number to the end to avoid name collisions
+                        let mut preflight_file_counter = self.preflight_file_counter.borrow_mut();
+                        *preflight_file_counter += 1;
+-                       format!("preflight.{}-{}.js", sanitized_name, preflight_file_counter)
++                       format!("preflight.{}-{}.cjs", sanitized_name, preflight_file_counter)
+                };
+ 
+                // Store the file name in a map so if anyone tries to "bring" it as a module,
+@@ -1462,7 +1462,7 @@ impl<'a> JSifier<'a> {
+                        file_map.insert(class.name.span.file_id.clone(), *id);
+                        *id
+                };
+-               format!("./inflight.{}-{}.js", class.name.name, id)
++               format!("./inflight.{}-{}.cjs", class.name.name, id)
+        }
+ }
+```
+
+```sh
+git diff libs/wingsdk/src/shared/bundling.ts
+diff --git a/libs/wingsdk/src/shared/bundling.ts b/libs/wingsdk/src/shared/bundling.ts
+index 468a2611..0dbca6ac 100644
+--- a/libs/wingsdk/src/shared/bundling.ts
++++ b/libs/wingsdk/src/shared/bundling.ts
+@@ -19,7 +19,7 @@ export interface Bundle {
+ export function createBundle(entrypoint: string, outputDir?: string): Bundle {
+   const outdir = resolve(outputDir ?? entrypoint + ".bundle");
+   mkdirSync(outdir, { recursive: true });
+-  const outfile = join(outdir, "index.js");
++  const outfile = join(outdir, "index.cjs");
+ 
+   let esbuild = buildSync({
+     bundle: true,
+```
+
+- pnpm compile and pnpm wing commands ran successfully
+![](./pnpm-compile-and-pnpm-wing.png)
+- wing it main.w runs successfully (using the cli built from the compilation above)
+![](./compiler-success-try-1.png)
+
