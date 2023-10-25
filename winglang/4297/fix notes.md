@@ -15,7 +15,8 @@ Are you asking who uses the output of [jsify.rs](http://jsify.rs/)? It's someth
 the `compile()` function is used by the type script library `wingcompiler` (see `libs/wingcopmiler`).  
 This library is used by both the wing console (gui) and the `wing` command line application.
 
-Cursor:
+> Q: can you help me with an explanation of this in further detail?
+
 1. lib.rs: This is the main entry point of the wingc library, which is a compiler for the Wing programming language. It defines the compile() function, which is the main function used to compile Wing code. This function uses many other modules and functions defined in the library, including the jsify module.  
   
 2. jsify.rs: This module is responsible for converting the abstract syntax tree (AST) of a Wing program into JavaScript code. The main function in this module is jsify(), which takes a path to a source file and a reference to a Scope (which represents a block of Wing code) and generates JavaScript code. This function is used by the compile() function in lib.rs.  
@@ -26,8 +27,33 @@ Cursor:
   
 In summary, when you write Wing code and run it using the Wing console or the wing command line application, your code is compiled to JavaScript using the wingc compiler. The jsify module is a key part of this process, as it is responsible for the actual conversion of Wing code into JavaScript.
 
+> Q: please elaborate on the relationships between lib.rs and jsify.rs and wingcompiler to wingc
 
+Sure, let's dive deeper into the relationships:  
+  
+1. lib.rs and jsify.rs: These two files are part of the wingc library, which is the compiler for the Wing programming language. lib.rs is the main entry point of the library, and it uses many other modules and functions defined in the library, including the jsify module. The jsify module, defined in jsify.rs, is responsible for converting the abstract syntax tree (AST) of a Wing program into JavaScript code. The compile() function in lib.rs uses the jsify() function from jsify.rs to perform this conversion.  
+  
+2. wingcompiler and wingc: wingcompiler is a TypeScript library that provides a JavaScript/TypeScript interface to the wingc compiler. It uses the compile() function from lib.rs to compile Wing code. In other words, wingcompiler is a wrapper around wingc that allows it to be used from JavaScript and TypeScript code.  
+  
+3. wingc and wing: The wing command line application and Wing console (GUI) are user-facing applications that allow developers to write and run Wing code. They use the wingcompiler library to compile the Wing code, which in turn uses the wingc compiler.  
+  
+In summary, lib.rs and jsify.rs are part of the wingc compiler's implementation, wingcompiler is a TypeScript interface to wingc, and wing is a user-facing application that uses wingcompiler (and therefore wingc) to compile and run Wing code.
 
+> Q: the wing cli uses wingcompiler, a typescript wrapper around wingc, to compile wing code. Further, wingc uses lib.rs and jsify.rs. can you explain what part jsify plays in lib.rs? why does lib.rs refer to jsify? what are any upstream and downstream resources that are interacting directly or indirectly with jsify.rs?
+
+The jsify.rs module in the wingc library plays a crucial role in the compilation process of Wing code. It is responsible for the conversion of the abstract syntax tree (AST) of a Wing program into JavaScript code. This is a key step in the compilation process because Wing is a language that compiles to JavaScript, which means that the end result of compiling Wing code is JavaScript code.  
+  
+The lib.rs file refers to jsify.rs because it uses the jsify() function defined in jsify.rs as part of the compile() function. Here's a simplified view of how it works:  
+  
+1. The compile() function in lib.rs takes Wing source code as input.  
+2. It parses the Wing code into an AST.  
+3. It then passes this AST to the jsify() function (from jsify.rs), which converts the AST into JavaScript code.  
+  
+In terms of upstream and downstream resources:  
+  
+- Upstream: The main upstream resource for jsify.rs is the lib.rs file, which calls the jsify() function. The input to jsify() is the AST of a Wing program, which is produced by the parsing and type-checking steps of the compile() function in lib.rs.  
+  
+- Downstream: The main downstream resource from jsify.rs is the JavaScript code it produces. This code is used by the wingcompiler TypeScript library, which provides it to the wing command line application or the Wing console (GUI) to be executed.
 -----
 
 ## Hasan Abu-Rayyan

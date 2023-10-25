@@ -148,13 +148,15 @@
   },
   "active": "5d1240cadaf9672d",
   "lastOpenFiles": [
+    "README.md",
+    "cdk/aws cdk course notes.md",
+    "winglang/4297/fix notes.md",
+    "cdk",
     "winglang/4297/target-resources.png",
     "winglang/4297/4297 fix compiler.md",
     "winglang/4297/image.png",
-    "winglang/4297/fix notes.md",
     "winglang/ai chat - cursor.md",
     "github/Github.md",
-    "README.md",
     "winglang/git.md",
     "rust/comprehensive rust google course.md",
     "github_actions/github-actions.pdf",
@@ -177,7 +179,6 @@
     "wing-oss/github/slides-2022.pdf",
     "wing-oss/github/Untitled.md",
     "wing-oss/github/Github.md",
-    "wing-oss/github",
-    "wing-oss"
+    "wing-oss/github"
   ]
 }
