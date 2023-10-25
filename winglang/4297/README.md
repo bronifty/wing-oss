@@ -352,6 +352,24 @@ index 22d68f3d..0b1cc8b9 100644
 ```
 
 ```sh
+git diff libs/wingcompiler/src/compile.ts
+diff --git a/libs/wingcompiler/src/compile.ts b/libs/wingcompiler/src/compile.ts
+index 355f0ecd..1e14179f 100644
+--- a/libs/wingcompiler/src/compile.ts
++++ b/libs/wingcompiler/src/compile.ts
+@@ -16,7 +16,7 @@ Error.stackTraceLimit = 50;
+ 
+ // const log = debug("wing:compile");
+ const WINGC_COMPILE = "wingc_compile";
+-const WINGC_PREFLIGHT = "preflight.js";
++const WINGC_PREFLIGHT = "preflight.cjs";
+ 
+ const DEFAULT_SYNTH_DIR_SUFFIX: Record<Target, string | undefined> = {
+   [Target.TF_AWS]: "tfaws",
+```
+
+
+```sh
 git diff libs/wingsdk/src/shared/bundling.ts
 diff --git a/libs/wingsdk/src/shared/bundling.ts b/libs/wingsdk/src/shared/bundling.ts
 index 468a2611..0dbca6ac 100644
