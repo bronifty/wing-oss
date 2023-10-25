@@ -13,7 +13,7 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "winglang/4297/target-resources.png"
+                "file": "winglang/4297/wing-compiler.png"
               }
             }
           }
@@ -83,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "winglang/4297/target-resources.png",
+                "file": "winglang/4297/wing-compiler.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "winglang/4297/target-resources.png",
+                "file": "winglang/4297/wing-compiler.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "winglang/4297/target-resources.png"
+                "file": "winglang/4297/wing-compiler.png"
               }
             }
           }
@@ -144,10 +144,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d0bcb8397bc14aa7",
+  "active": "3f8e70d14f6076b1",
   "lastOpenFiles": [
-    "winglang/4297/wing-compiler.png",
+    "winglang/4297/wing-compiler2.png",
     "winglang/4297/target-resources.png",
+    "winglang/4297/wing-compiler.png",
     "winglang/4297/wing-compiler 1.png",
     "README.md",
     "winglang/4297/README.md",
