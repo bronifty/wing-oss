@@ -391,3 +391,9 @@ index 468a2611..0dbca6ac 100644
 - wing it main.w runs successfully (using the cli built from the compilation above)
 ![](./compiler-success-try-1.png)
 
+
+- pnpm build with the commit before mine
+![](./pnpm-build-original.png)
+
+- my pnpm build result 
+![](./pnpm-build-mine.png)

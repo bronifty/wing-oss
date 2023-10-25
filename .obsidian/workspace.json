@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 340.5086555480957
   },
   "right": {
     "id": "8daab23b3b549aed",
@@ -148,8 +148,10 @@
   },
   "active": "d0bcb8397bc14aa7",
   "lastOpenFiles": [
-    "README.md",
+    "winglang/4297/pnpm-build-mine.png",
     "winglang/4297/README.md",
+    "winglang/4297/pnpm-build-original.png",
+    "README.md",
     "winglang/4297/compiler-success-try-1 1.png",
     "winglang/4297/pnpm-compile-and-pnpm-wing.png",
     "winglang/4297/compiler-success-try-1.png",
@@ -161,7 +163,6 @@
     "cdk/aws cdk course notes.md",
     "cdk",
     "winglang/4297/4297 fix compiler.md",
-    "winglang/4297/image.png",
     "winglang/ai chat - cursor.md",
     "github/Github.md",
     "winglang/git.md",
@@ -171,7 +172,6 @@
     "github_actions/git-review.md",
     "github/Untitled.md",
     "github/slides-2022.pdf",
-    "wing-oss/winglang/4297/image.png",
     "wing-oss/winglang/4297/fix notes.md",
     "wing-oss/winglang/4297/4297 fix compiler.md",
     "wing-oss/winglang/git.md",
