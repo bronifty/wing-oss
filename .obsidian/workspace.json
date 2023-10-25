@@ -11,11 +11,9 @@
             "id": "d0bcb8397bc14aa7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "winglang/4297/README.md",
-                "mode": "source",
-                "source": false
+                "file": "winglang/4297/wing-compiler2.png"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "winglang/4297/README.md",
+                "file": "winglang/4297/wing-compiler2.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "winglang/4297/README.md",
+                "file": "winglang/4297/wing-compiler2.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "winglang/4297/README.md"
+                "file": "winglang/4297/wing-compiler2.png"
               }
             }
           }
@@ -148,12 +146,12 @@
   },
   "active": "d0bcb8397bc14aa7",
   "lastOpenFiles": [
-    "README.md",
+    "winglang/4297/README.md",
     "winglang/4297/wing-compiler.png",
+    "README.md",
     "winglang/4297/wing-compiler2.png",
     "winglang/4297/target-resources.png",
     "winglang/4297/wing-compiler 1.png",
-    "winglang/4297/README.md",
     "cdk/aws cdk course notes.md",
     "cdk",
     "winglang/4297/4297 fix compiler.md",
