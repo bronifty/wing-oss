@@ -127,8 +127,10 @@ format!("preflight.{}-{}.cjs",
 			Ok(()) => {}
 			Err(err) => report_diagnostic(err.into()),
 		}
-	}```
+	}
+```
 
 ### Target Resources
 - preflight.cjs is created by 
+
 ![](./target-resources.png)
