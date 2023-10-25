@@ -15,6 +15,19 @@ Are you asking who uses the output of [jsify.rs](http://jsify.rs/)? It's someth
 the `compile()` function is used by the type script library `wingcompiler` (see `libs/wingcopmiler`).  
 This library is used by both the wing console (gui) and the `wing` command line application.
 
+Cursor:
+1. lib.rs: This is the main entry point of the wingc library, which is a compiler for the Wing programming language. It defines the compile() function, which is the main function used to compile Wing code. This function uses many other modules and functions defined in the library, including the jsify module.  
+  
+2. jsify.rs: This module is responsible for converting the abstract syntax tree (AST) of a Wing program into JavaScript code. The main function in this module is jsify(), which takes a path to a source file and a reference to a Scope (which represents a block of Wing code) and generates JavaScript code. This function is used by the compile() function in lib.rs.  
+  
+3. wingcompiler: This is a TypeScript library that provides a JavaScript/TypeScript interface to the wingc compiler. It uses the compile() function from lib.rs to compile Wing code.  
+  
+4. wing command line application and Wing console (GUI): These are user-facing applications that allow developers to write and run Wing code. They use the wingcompiler library to compile the Wing code.  
+  
+In summary, when you write Wing code and run it using the Wing console or the wing command line application, your code is compiled to JavaScript using the wingc compiler. The jsify module is a key part of this process, as it is responsible for the actual conversion of Wing code into JavaScript.
+
+
+
 -----
 
 ## Hasan Abu-Rayyan
@@ -87,12 +100,7 @@ format!("preflight.{}-{}.cjs",
 - libs/wingc/src/jsify.rs
 ```rust
 	fn emit_inflight_file(&self, class: &AstClass, inflight_class_code: CodeMaker, ctx: &mut JSifyContext) {
-		let
-		
-
-
-
-name = &class.name.name;
+		let name = &class.name.name;
 		let mut code = CodeMaker::default();
 
 		let inputs = if let Some(lifts) = &ctx.lifts {
@@ -120,3 +128,7 @@ name = &class.name.name;
 			Err(err) => report_diagnostic(err.into()),
 		}
 	}```
+
+### Target Resources
+- preflight.cjs is created by 
+![](./target-resources.png)
