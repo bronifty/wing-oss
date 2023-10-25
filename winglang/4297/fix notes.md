@@ -54,6 +54,18 @@ In terms of upstream and downstream resources:
 - Upstream: The main upstream resource for jsify.rs is the lib.rs file, which calls the jsify() function. The input to jsify() is the AST of a Wing program, which is produced by the parsing and type-checking steps of the compile() function in lib.rs.  
   
 - Downstream: The main downstream resource from jsify.rs is the JavaScript code it produces. This code is used by the wingcompiler TypeScript library, which provides it to the wing command line application or the Wing console (GUI) to be executed.
+
+> Q: elaborate on the relationship between these two files @wingc.ts @compile.ts 
+
+Sure, let's break down the relationship between these two files:  
+  
+1. wingc.ts: This file is part of the wingcompiler TypeScript library and it provides the interface to the wingc compiler. It defines the load() function, which is responsible for loading the wingc compiler and setting up the necessary environment for it to run. It also defines the WingCompilerFunction type, which lists the various functions that can be invoked on the wingc compiler.  
+  
+2. compile.ts: This file is also part of the wingcompiler library and it uses the load() function from wingc.ts to load the wingc compiler. Once the compiler is loaded, it can be used to compile Wing code. The compile() function in compile.ts is responsible for this. It sets up the necessary environment variables, loads the wingc compiler, and then invokes the wingc_compile function on it to compile the Wing code.  
+  
+In summary, wingc.ts provides the interface to the wingc compiler, and compile.ts uses this interface to compile Wing code. The load() function in wingc.ts is used to load the wingc compiler, and the compile() function in compile.ts is used to compile the Wing code.
+
+
 -----
 
 ## Hasan Abu-Rayyan
