@@ -265,6 +265,7 @@ On branch fourth-branch
 nothing to commit, working tree clean
 ```
 
+#### Remove Unstaged Changes
 - removing unstaged changes from untracked files has a separate command - git clean
 	- git clean -df means delete force
 		- -dn means delete and note which will happen
@@ -291,6 +292,7 @@ On branch fourth-branch
 nothing to commit, working tree clean
 ```
 
+#### Remove Staged Changes
 - next we will undo staged changes
 	- with the old syntax it will require 2 commands
 		- git reset filename - unstages file
@@ -360,3 +362,19 @@ Updated 1 path from the index
 
 - git reset and restore do the same thing in this context, but restore was created to be more explicit
 - git reset has another purpose, which is to reset the HEAD to delete commits
+
+### Go Back 1 Commit
+
+```sh
+git reset --soft HEAD~1
+```
+- will delete the commit but keep the staged changes 
+```sh
+git reset HEAD~1
+```
+- will delete the commit and remove changes from staging area
+```sh
+git reset --hard HEAD~1
+```
+- will delete the commit remove staged changes and delete the file from the working directory
+

@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "github_actions/README.md",
-                "mode": "preview",
+                "file": "github/README.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 340.5086555480957
+    "width": 200
   },
   "right": {
     "id": "8daab23b3b549aed",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "github_actions/README.md",
+                "file": "github/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "github_actions/README.md",
+                "file": "github/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "github_actions/README.md"
+                "file": "github/README.md"
               }
             }
           }
@@ -148,17 +148,19 @@
   },
   "active": "d0bcb8397bc14aa7",
   "lastOpenFiles": [
+    "github/slides-2022.pdf",
+    "github/README.md",
+    "cdk/README.md",
+    "README.md",
+    "github_actions/README.md",
     "github_actions/git-review.md",
     "winglang/4297/README.md",
     "winglang/ai chat - cursor.md",
     "winglang/git.md",
     "rust/README.md",
-    "github/README.md",
     "github/Untitled.md",
-    "cdk/README.md",
     "winglang/4297/pnpm-build-mine.png",
     "winglang/4297/pnpm-build-original.png",
-    "README.md",
     "winglang/4297/compiler-success-try-1 1.png",
     "winglang/4297/pnpm-compile-and-pnpm-wing.png",
     "winglang/4297/compiler-success-try-1.png",
@@ -170,8 +172,6 @@
     "cdk",
     "winglang/4297/4297 fix compiler.md",
     "github_actions/github-actions.pdf",
-    "github_actions/README.md",
-    "github/slides-2022.pdf",
     "wing-oss/winglang/4297/fix notes.md",
     "wing-oss/winglang/4297/4297 fix compiler.md",
     "wing-oss/winglang/git.md",
