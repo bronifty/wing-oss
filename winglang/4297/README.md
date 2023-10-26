@@ -397,3 +397,8 @@ index 468a2611..0dbca6ac 100644
 
 - my pnpm build result 
 ![](./pnpm-build-mine.png)
+
+### Testing
+- wingpresso api with website bucket
+![](./wingpresso-api-test.png)
+

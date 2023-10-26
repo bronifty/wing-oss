@@ -378,3 +378,20 @@ git reset --hard HEAD~1
 ```
 - will delete the commit remove staged changes and delete the file from the working directory
 
+#### Committing Detached HEAD Changes
+```sh
+git branch detached-head 43b7d0f
+git switch detached-head
+git add . && git commit -m "adding to detached-head"
+git switch main
+git merge detached-head
+git branch -d detached-head
+```
+
+#### Git Stash
+- stash changes instead of committing; apply them later to get them back
+```sh
+git stash
+git stash apply
+```
+
