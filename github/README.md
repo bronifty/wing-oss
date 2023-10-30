@@ -392,6 +392,14 @@ git branch -d detached-head
 - stash changes instead of committing; apply them later to get them back
 ```sh
 git stash
-git stash apply
+git stash apply 1
+git stash list
+git stash drop 0
+git stash clear
 ```
 
+#### Git Reflog
+- restore lost info
+```sh
+
+```
